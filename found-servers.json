@@ -1,0 +1,692 @@
+{
+  "n00dles": {
+    "host": "n00dles",
+    "portReq": 0,
+    "hackReq": 1,
+    "maxMoney": 1750000,
+    "growth": 3000,
+    "minSec": 1,
+    "maxRam": 4,
+    "root": true
+  },
+  "foodnstuff": {
+    "host": "foodnstuff",
+    "portReq": 0,
+    "hackReq": 1,
+    "maxMoney": 50000000,
+    "growth": 5,
+    "minSec": 3,
+    "maxRam": 16,
+    "root": true
+  },
+  "sigma-cosmetics": {
+    "host": "sigma-cosmetics",
+    "portReq": 0,
+    "hackReq": 5,
+    "maxMoney": 57500000,
+    "growth": 10,
+    "minSec": 3,
+    "maxRam": 16,
+    "root": true
+  },
+  "joesguns": {
+    "host": "joesguns",
+    "portReq": 0,
+    "hackReq": 10,
+    "maxMoney": 62500000,
+    "growth": 20,
+    "minSec": 5,
+    "maxRam": 16,
+    "root": true
+  },
+  "hong-fang-tea": {
+    "host": "hong-fang-tea",
+    "portReq": 0,
+    "hackReq": 30,
+    "maxMoney": 75000000,
+    "growth": 20,
+    "minSec": 5,
+    "maxRam": 16,
+    "root": true
+  },
+  "harakiri-sushi": {
+    "host": "harakiri-sushi",
+    "portReq": 0,
+    "hackReq": 40,
+    "maxMoney": 100000000,
+    "growth": 40,
+    "minSec": 5,
+    "maxRam": 16,
+    "root": true
+  },
+  "iron-gym": {
+    "host": "iron-gym",
+    "portReq": 1,
+    "hackReq": 100,
+    "maxMoney": 500000000,
+    "growth": 20,
+    "minSec": 10,
+    "maxRam": 32,
+    "root": true
+  },
+  "max-hardware": {
+    "host": "max-hardware",
+    "portReq": 1,
+    "hackReq": 80,
+    "maxMoney": 250000000,
+    "growth": 30,
+    "minSec": 5,
+    "maxRam": 32,
+    "root": true
+  },
+  "CSEC": {
+    "host": "CSEC",
+    "portReq": 1,
+    "hackReq": 56,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 8,
+    "root": true
+  },
+  "nectar-net": {
+    "host": "nectar-net",
+    "portReq": 0,
+    "hackReq": 20,
+    "maxMoney": 68750000,
+    "growth": 25,
+    "minSec": 7,
+    "maxRam": 16,
+    "root": true
+  },
+  "zer0": {
+    "host": "zer0",
+    "portReq": 1,
+    "hackReq": 75,
+    "maxMoney": 187500000,
+    "growth": 40,
+    "minSec": 8,
+    "maxRam": 32,
+    "root": true
+  },
+  "neo-net": {
+    "host": "neo-net",
+    "portReq": 1,
+    "hackReq": 50,
+    "maxMoney": 125000000,
+    "growth": 25,
+    "minSec": 8,
+    "maxRam": 32,
+    "root": true
+  },
+  "omega-net": {
+    "host": "omega-net",
+    "portReq": 2,
+    "hackReq": 184,
+    "maxMoney": 1709961300,
+    "growth": 34,
+    "minSec": 10,
+    "maxRam": 32,
+    "root": true
+  },
+  "silver-helix": {
+    "host": "silver-helix",
+    "portReq": 2,
+    "hackReq": 150,
+    "maxMoney": 1125000000,
+    "growth": 30,
+    "minSec": 10,
+    "maxRam": 64,
+    "root": true
+  },
+  "phantasy": {
+    "host": "phantasy",
+    "portReq": 2,
+    "hackReq": 100,
+    "maxMoney": 600000000,
+    "growth": 35,
+    "minSec": 7,
+    "maxRam": 32,
+    "root": true
+  },
+  "johnson-ortho": {
+    "host": "johnson-ortho",
+    "portReq": 2,
+    "hackReq": 257,
+    "maxMoney": 1852148775,
+    "growth": 56,
+    "minSec": 18,
+    "maxRam": 0,
+    "root": false
+  },
+  "the-hub": {
+    "host": "the-hub",
+    "portReq": 2,
+    "hackReq": 277,
+    "maxMoney": 3916253900,
+    "growth": 49,
+    "minSec": 12,
+    "maxRam": 8,
+    "root": false
+  },
+  "netlink": {
+    "host": "netlink",
+    "portReq": 3,
+    "hackReq": 414,
+    "maxMoney": 6875000000,
+    "growth": 64,
+    "minSec": 24,
+    "maxRam": 128,
+    "root": false
+  },
+  "crush-fitness": {
+    "host": "crush-fitness",
+    "portReq": 2,
+    "hackReq": 269,
+    "maxMoney": 1070286825,
+    "growth": 28,
+    "minSec": 12,
+    "maxRam": 0,
+    "root": false
+  },
+  "comptek": {
+    "host": "comptek",
+    "portReq": 3,
+    "hackReq": 308,
+    "maxMoney": 5553431900,
+    "growth": 55,
+    "minSec": 20,
+    "maxRam": 0,
+    "root": false
+  },
+  "avmnite-02h": {
+    "host": "avmnite-02h",
+    "portReq": 2,
+    "hackReq": 202,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 128,
+    "root": true
+  },
+  "rothman-uni": {
+    "host": "rothman-uni",
+    "portReq": 3,
+    "hackReq": 393,
+    "maxMoney": 5459176550,
+    "growth": 45,
+    "minSec": 18,
+    "maxRam": 64,
+    "root": false
+  },
+  "zb-institute": {
+    "host": "zb-institute",
+    "portReq": 5,
+    "hackReq": 746,
+    "maxMoney": 21615650525,
+    "growth": 81,
+    "minSec": 27,
+    "maxRam": 32,
+    "root": false
+  },
+  "summit-uni": {
+    "host": "summit-uni",
+    "portReq": 3,
+    "hackReq": 445,
+    "maxMoney": 6893258800,
+    "growth": 52,
+    "minSec": 18,
+    "maxRam": 64,
+    "root": false
+  },
+  "syscore": {
+    "host": "syscore",
+    "portReq": 4,
+    "hackReq": 631,
+    "maxMoney": 11299522975,
+    "growth": 67,
+    "minSec": 23,
+    "maxRam": 0,
+    "root": false
+  },
+  "catalyst": {
+    "host": "catalyst",
+    "portReq": 3,
+    "hackReq": 440,
+    "maxMoney": 13191897475,
+    "growth": 41,
+    "minSec": 23,
+    "maxRam": 32,
+    "root": false
+  },
+  "I.I.I.I": {
+    "host": "I.I.I.I",
+    "portReq": 3,
+    "hackReq": 340,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 128,
+    "root": false
+  },
+  "aevum-police": {
+    "host": "aevum-police",
+    "portReq": 4,
+    "hackReq": 431,
+    "maxMoney": 9682749725,
+    "growth": 30,
+    "minSec": 24,
+    "maxRam": 64,
+    "root": false
+  },
+  "lexo-corp": {
+    "host": "lexo-corp",
+    "portReq": 4,
+    "hackReq": 694,
+    "maxMoney": 18047059125,
+    "growth": 58,
+    "minSec": 21,
+    "maxRam": 128,
+    "root": false
+  },
+  "rho-construction": {
+    "host": "rho-construction",
+    "portReq": 3,
+    "hackReq": 525,
+    "maxMoney": 13549273750,
+    "growth": 52,
+    "minSec": 19,
+    "maxRam": 32,
+    "root": false
+  },
+  "millenium-fitness": {
+    "host": "millenium-fitness",
+    "portReq": 3,
+    "hackReq": 478,
+    "maxMoney": 6250000000,
+    "growth": 36,
+    "minSec": 18,
+    "maxRam": 32,
+    "root": false
+  },
+  "alpha-ent": {
+    "host": "alpha-ent",
+    "portReq": 4,
+    "hackReq": 510,
+    "maxMoney": 18024509125,
+    "growth": 58,
+    "minSec": 21,
+    "maxRam": 16,
+    "root": false
+  },
+  "galactic-cyber": {
+    "host": "galactic-cyber",
+    "portReq": 5,
+    "hackReq": 863,
+    "maxMoney": 19401381575,
+    "growth": 74,
+    "minSec": 20,
+    "maxRam": 0,
+    "root": false
+  },
+  "aerocorp": {
+    "host": "aerocorp",
+    "portReq": 5,
+    "hackReq": 878,
+    "maxMoney": 25042555675,
+    "growth": 60,
+    "minSec": 29,
+    "maxRam": 0,
+    "root": false
+  },
+  "snap-fitness": {
+    "host": "snap-fitness",
+    "portReq": 4,
+    "hackReq": 717,
+    "maxMoney": 11250000000,
+    "growth": 55,
+    "minSec": 17,
+    "maxRam": 0,
+    "root": false
+  },
+  "global-pharm": {
+    "host": "global-pharm",
+    "portReq": 4,
+    "hackReq": 757,
+    "maxMoney": 39039852375,
+    "growth": 84,
+    "minSec": 28,
+    "maxRam": 8,
+    "root": false
+  },
+  "omnia": {
+    "host": "omnia",
+    "portReq": 5,
+    "hackReq": 883,
+    "maxMoney": 23120848750,
+    "growth": 62,
+    "minSec": 30,
+    "maxRam": 32,
+    "root": false
+  },
+  "unitalife": {
+    "host": "unitalife",
+    "portReq": 4,
+    "hackReq": 776,
+    "maxMoney": 27323394400,
+    "growth": 73,
+    "minSec": 26,
+    "maxRam": 64,
+    "root": false
+  },
+  "deltaone": {
+    "host": "deltaone",
+    "portReq": 5,
+    "hackReq": 870,
+    "maxMoney": 34761355275,
+    "growth": 56,
+    "minSec": 27,
+    "maxRam": 0,
+    "root": false
+  },
+  "defcomm": {
+    "host": "defcomm",
+    "portReq": 5,
+    "hackReq": 1008,
+    "maxMoney": 21582924900,
+    "growth": 68,
+    "minSec": 31,
+    "maxRam": 0,
+    "root": false
+  },
+  "solaris": {
+    "host": "solaris",
+    "portReq": 5,
+    "hackReq": 806,
+    "maxMoney": 20204955075,
+    "growth": 76,
+    "minSec": 23,
+    "maxRam": 16,
+    "root": false
+  },
+  "univ-energy": {
+    "host": "univ-energy",
+    "portReq": 4,
+    "hackReq": 860,
+    "maxMoney": 28686689325,
+    "growth": 85,
+    "minSec": 28,
+    "maxRam": 32,
+    "root": false
+  },
+  "zeus-med": {
+    "host": "zeus-med",
+    "portReq": 5,
+    "hackReq": 829,
+    "maxMoney": 37010153900,
+    "growth": 80,
+    "minSec": 29,
+    "maxRam": 0,
+    "root": false
+  },
+  "icarus": {
+    "host": "icarus",
+    "portReq": 5,
+    "hackReq": 851,
+    "maxMoney": 23682682075,
+    "growth": 88,
+    "minSec": 31,
+    "maxRam": 0,
+    "root": false
+  },
+  "taiyang-digital": {
+    "host": "taiyang-digital",
+    "portReq": 5,
+    "hackReq": 931,
+    "maxMoney": 20463815175,
+    "growth": 79,
+    "minSec": 25,
+    "maxRam": 0,
+    "root": false
+  },
+  "infocomm": {
+    "host": "infocomm",
+    "portReq": 5,
+    "hackReq": 932,
+    "maxMoney": 20141803075,
+    "growth": 74,
+    "minSec": 28,
+    "maxRam": 0,
+    "root": false
+  },
+  "zb-def": {
+    "host": "zb-def",
+    "portReq": 4,
+    "hackReq": 822,
+    "maxMoney": 25281275075,
+    "growth": 70,
+    "minSec": 20,
+    "maxRam": 0,
+    "root": false
+  },
+  "nova-med": {
+    "host": "nova-med",
+    "portReq": 4,
+    "hackReq": 777,
+    "maxMoney": 31005456000,
+    "growth": 77,
+    "minSec": 25,
+    "maxRam": 0,
+    "root": false
+  },
+  "applied-energetics": {
+    "host": "applied-energetics",
+    "portReq": 4,
+    "hackReq": 804,
+    "maxMoney": 23603339975,
+    "growth": 75,
+    "minSec": 24,
+    "maxRam": 0,
+    "root": false
+  },
+  "titan-labs": {
+    "host": "titan-labs",
+    "portReq": 5,
+    "hackReq": 870,
+    "maxMoney": 18960169575,
+    "growth": 62,
+    "minSec": 24,
+    "maxRam": 32,
+    "root": false
+  },
+  "microdyne": {
+    "host": "microdyne",
+    "portReq": 5,
+    "hackReq": 815,
+    "maxMoney": 16983857450,
+    "growth": 80,
+    "minSec": 23,
+    "maxRam": 64,
+    "root": false
+  },
+  "run4theh111z": {
+    "host": "run4theh111z",
+    "portReq": 4,
+    "hackReq": 547,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 256,
+    "root": false
+  },
+  "fulcrumtech": {
+    "host": "fulcrumtech",
+    "portReq": 5,
+    "hackReq": 1099,
+    "maxMoney": 35788686625,
+    "growth": 93,
+    "minSec": 29,
+    "maxRam": 256,
+    "root": false
+  },
+  "stormtech": {
+    "host": "stormtech",
+    "portReq": 5,
+    "hackReq": 953,
+    "maxMoney": 28443083500,
+    "growth": 82,
+    "minSec": 27,
+    "maxRam": 0,
+    "root": false
+  },
+  "vitalife": {
+    "host": "vitalife",
+    "portReq": 5,
+    "hackReq": 857,
+    "maxMoney": 17653053675,
+    "growth": 72,
+    "minSec": 29,
+    "maxRam": 32,
+    "root": false
+  },
+  "helios": {
+    "host": "helios",
+    "portReq": 5,
+    "hackReq": 830,
+    "maxMoney": 15598198250,
+    "growth": 71,
+    "minSec": 32,
+    "maxRam": 128,
+    "root": false
+  },
+  "omnitek": {
+    "host": "omnitek",
+    "portReq": 5,
+    "hackReq": 1047,
+    "maxMoney": 380792267575,
+    "growth": 99,
+    "minSec": 30,
+    "maxRam": 128,
+    "root": false
+  },
+  ".": {
+    "host": ".",
+    "portReq": 4,
+    "hackReq": 518,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 16,
+    "root": false
+  },
+  "kuai-gong": {
+    "host": "kuai-gong",
+    "portReq": 5,
+    "hackReq": 1267,
+    "maxMoney": 554058326900,
+    "growth": 96,
+    "minSec": 33,
+    "maxRam": 0,
+    "root": false
+  },
+  "4sigma": {
+    "host": "4sigma",
+    "portReq": 5,
+    "hackReq": 1019,
+    "maxMoney": 386869369100,
+    "growth": 82,
+    "minSec": 20,
+    "maxRam": 0,
+    "root": false
+  },
+  "b-and-a": {
+    "host": "b-and-a",
+    "portReq": 5,
+    "hackReq": 1049,
+    "maxMoney": 530479154625,
+    "growth": 67,
+    "minSec": 29,
+    "maxRam": 0,
+    "root": false
+  },
+  "blade": {
+    "host": "blade",
+    "portReq": 5,
+    "hackReq": 1173,
+    "maxMoney": 564579833275,
+    "growth": 69,
+    "minSec": 30,
+    "maxRam": 512,
+    "root": false
+  },
+  "clarkinc": {
+    "host": "clarkinc",
+    "portReq": 5,
+    "hackReq": 994,
+    "maxMoney": 407274190200,
+    "growth": 62,
+    "minSec": 21,
+    "maxRam": 0,
+    "root": false
+  },
+  "powerhouse-fitness": {
+    "host": "powerhouse-fitness",
+    "portReq": 5,
+    "hackReq": 1026,
+    "maxMoney": 22500000000,
+    "growth": 57,
+    "minSec": 19,
+    "maxRam": 16,
+    "root": false
+  },
+  "nwo": {
+    "host": "nwo",
+    "portReq": 5,
+    "hackReq": 1230,
+    "maxMoney": 624080727450,
+    "growth": 71,
+    "minSec": 33,
+    "maxRam": 0,
+    "root": false
+  },
+  "ecorp": {
+    "host": "ecorp",
+    "portReq": 5,
+    "hackReq": 1201,
+    "maxMoney": 1393745816800,
+    "growth": 99,
+    "minSec": 33,
+    "maxRam": 0,
+    "root": false
+  },
+  "megacorp": {
+    "host": "megacorp",
+    "portReq": 5,
+    "hackReq": 1167,
+    "maxMoney": 1235999821125,
+    "growth": 99,
+    "minSec": 33,
+    "maxRam": 0,
+    "root": false
+  },
+  "fulcrumassets": {
+    "host": "fulcrumassets",
+    "portReq": 5,
+    "hackReq": 1161,
+    "maxMoney": 25000000,
+    "growth": 1,
+    "minSec": 33,
+    "maxRam": 0,
+    "root": false
+  },
+  "The-Cave": {
+    "host": "The-Cave",
+    "portReq": 5,
+    "hackReq": 925,
+    "maxMoney": 0,
+    "growth": 0,
+    "minSec": 1,
+    "maxRam": 0,
+    "root": false
+  }
+}
