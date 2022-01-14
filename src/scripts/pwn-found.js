@@ -3,12 +3,9 @@
 import { crackServer } from "/scripts/lib/crack-server.js";
 
 export async function main(ns) {
-	ns.disableLog("scp");
-	ns.disableLog("exec");
-	ns.disableLog("sleep");
-	ns.disableLog("fileExists");
-	ns.disableLog("getScriptRam");
+	ns.disableLog("ALL");
 
+	const debug = false;
 	const srvList = JSON.parse(ns.read("server-list.txt"));
 	let pwn = true;
 
@@ -18,11 +15,12 @@ export async function main(ns) {
 
 			// only try cracking a server if  we haven't pwned it already.
 			if (
-				(await crackServer(ns, srv)) &&
-				!ns.fileExists("pwned.txt", srv.host)
+				((await crackServer(ns, srv)) &&
+					!ns.fileExists("pwned.txt", srv.host)) ||
+				debug
 			) {
 				// Start pilfering
-				ns.run("/scripts/cnc.js", 1, ["exec", srv.host, "pilfer", "self"]);
+				ns.run("/scripts/cnc.js", 1, "exec", srv.host, "pilfer", srv.host);
 
 				// Flag the server as pwned.
 				await ns.scp("pwned.txt", "home", srv.host);

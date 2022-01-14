@@ -1,12 +1,7 @@
 /** @param {NS} ns **/
 
 export async function main(ns) {
-	ns.disableLog("getServerMaxMoney");
-	ns.disableLog("getServerMinSecurityLevel");
-	ns.disableLog("getServerSecurityLevel");
-	ns.disableLog("getServerMoneyAvailable");
-	ns.disableLog("grow");
-	ns.disableLog("hack");
+	ns.disableLog("ALL");
 
 	const target = ns.args[0];
 	const moneyThreshold = ns.getServerMaxMoney(target) * 0.75;

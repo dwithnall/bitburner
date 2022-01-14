@@ -74,11 +74,7 @@ export async function remoteExecute(ns, execServer, script, targetServer = "") {
 	const srvList = JSON.parse(ns.read("server-list.txt"));
 
 	// check execution server exists
-	if (
-		execServer !== "self" &&
-		execServer !== "all" &&
-		!(execServer in srvList)
-	) {
+	if (execServer !== "all" && !(execServer in srvList)) {
 		ns.tprint("invalid execution server");
 		return;
 	}
