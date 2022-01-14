@@ -6,6 +6,7 @@ joesguns,joesguns,0,10,62500000,20,5,16,true
 hong-fang-tea,hong-fang-tea,0,30,75000000,20,5,16,true
 harakiri-sushi,harakiri-sushi,0,40,100000000,40,5,16,true
 iron-gym,iron-gym,1,100,500000000,20,10,32,true
+darkweb,darkweb,5,1,0,1,1,1,true
 max-hardware,max-hardware,1,80,250000000,30,5,32,true
 CSEC,CSEC,1,56,0,0,1,8,true
 nectar-net,nectar-net,0,20,68750000,25,7,16,true
@@ -14,7 +15,7 @@ neo-net,neo-net,1,50,125000000,25,8,32,true
 omega-net,omega-net,2,184,1709961300,34,10,32,true
 silver-helix,silver-helix,2,150,1125000000,30,10,64,true
 phantasy,phantasy,2,100,600000000,35,7,32,true
-johnson-ortho,johnson-ortho,2,257,1852148775,56,18,0,false
+johnson-ortho,johnson-ortho,2,257,1852148775,56,18,0,true
 the-hub,the-hub,2,277,3916253900,49,12,8,false
 netlink,netlink,3,414,6875000000,64,24,128,false
 crush-fitness,crush-fitness,2,269,1070286825,28,12,0,false

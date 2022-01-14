@@ -1,4 +1,5 @@
 /** @param {NS} ns **/
+
 export const serverInfo = (ns, host) => {
 	return {
 		host,
@@ -10,4 +11,15 @@ export const serverInfo = (ns, host) => {
 		maxRam: ns.getServerMaxRam(host),
 		root: ns.hasRootAccess(host),
 	};
+};
+
+export const portCount = (ns, target) => {
+	let openPorts = 0;
+	if (ns.sqlinject(target)) openPorts++;
+	if (ns.httpworm(target)) openPorts++;
+	if (ns.relaysmtp(target)) openPorts++;
+	if (ns.ftpcrack(target)) openPorts++;
+	if (ns.brutessh(target)) openPorts++;
+
+	return openPorts;
 };

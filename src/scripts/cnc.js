@@ -1,9 +1,5 @@
-import {
-	cleanServers,
-	remoteExecute,
-	killRunningScripts,
-} from "/scripts/lib/tools.js";
-
+import { remoteExecute } from "/scripts/lib/execute.js";
+import { cleanServers, killRunningScripts } from "/scripts/lib/clean.js";
 import { scripts } from "/scripts/lib/constants.js";
 
 export async function main(ns) {
@@ -32,7 +28,8 @@ export async function main(ns) {
 			await remoteExecute(ns, execServer, scriptFile, targetServer);
 			break;
 		case "pwnfound":
-			await ns.run("/scripts/pwn-found.js");
+			const processAll = target !== "all" ? "" : "all";
+			await ns.run("/scripts/pwn-found.js", 1, processAll);
 			break;
 		case "kill":
 			await killRunningScripts(ns, target);
