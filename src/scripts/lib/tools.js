@@ -44,27 +44,36 @@ export const printSeverStats = (ns, target) => {
 	let backdoor = srv.backdoorInstalled ? "BACKDOOR" : "NO BACKDOOR!";
 	let admin = srv.hasAdminRights ? "ADMIN" : "NO ADMIN!";
 
-	ns.tprint("\n");
-	ns.tprint(`${srv.hostname} [${srv.ip}] <${owner}>`);
-	ns.tprint(
-		`\t${admin} ${backdoor} hack: ${srv.hackDifficulty}/${srv.requiredHackingSkill} - ${srv.minDifficulty}/${srv.baseDifficulty}`
-	);
-	ns.tprint(`\tRAM ${srv.ramUsed}/${srv.maxRam} CORES: ${srv.cpuCores}`);
-	ns.tprint(
-		`\tPORTS: ${srv.openPortCount} / ${
-			srv.numOpenPortsRequired
-		} [${ports.toString()}]`
-	);
-	ns.tprint(
-		`\t$: ${srv.moneyAvailable} / ${srv.moneyMax} - ${srv.serverGrowth}`
-	);
-	ns.tprint("\nACTIVE PROCESSES\n");
-
+	let activeProc = [];
 	for (let idx in processes) {
-		ns.tprint(
+		activeProc.push(
 			`\t[Threads:${processes[idx].threads}] [pid:${processes[idx].pid}] ${processes[idx].filename} ${processes[idx].args}`
 		);
 	}
 
-	ns.tprint("\n");
+	let str = `
+	  ${srv.hostname} [${srv.ip}] <${owner}>
+	  ${admin} ${backdoor} hack: ${srv.hackDifficulty}/${
+		srv.requiredHackingSkill
+	} - ${srv.minDifficulty}/${srv.baseDifficulty}
+	  RAM ${srv.ramUsed}/${srv.maxRam} CORES: ${srv.cpuCores}
+	  PORTS: ${srv.openPortCount} / ${
+		srv.numOpenPortsRequired
+	} [${ports.toString()}]
+	  $:${formatter.format(srv.moneyAvailable)} / ${formatter.format(
+		srv.moneyMax
+	)} - +${formatter.format(srv.serverGrowth)}
+	  ACTIVE PROCESSES
+	${activeProc.join("\n")}`;
+
+	ns.tprintf(str);
 };
+
+var formatter = new Intl.NumberFormat("en-US", {
+	style: "currency",
+	currency: "USD",
+
+	// These options are needed to round to whole numbers if that's what you want.
+	//minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+	maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+});
