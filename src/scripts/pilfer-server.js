@@ -9,10 +9,16 @@ export async function main(ns) {
 
 	while (true) {
 		if (ns.getServerSecurityLevel(target) > securityThreshold) {
+			ns.print(`WEAKEN: ${target}`);
 			await ns.weaken(target);
-		} else if (ns.getServerMoneyAvailable(target) < moneyThreshold) {
+		} else if (
+			moneyThreshold > 0 &&
+			ns.getServerMoneyAvailable(target) < moneyThreshold
+		) {
+			ns.print(`GROW: ${target}`);
 			await ns.grow(target);
 		} else {
+			ns.print(`HACK: ${target}`);
 			await ns.hack(target);
 		}
 	}

@@ -1,6 +1,7 @@
 import { remoteExecute } from "/scripts/lib/execute.js";
 import { cleanServers, killRunningScripts } from "/scripts/lib/clean.js";
 import { scripts } from "/scripts/lib/constants.js";
+import { printSeverStats } from "/scripts/lib/tools.js";
 
 export async function main(ns) {
 	const action = ns.args[0];
@@ -34,11 +35,21 @@ export async function main(ns) {
 		case "kill":
 			await killRunningScripts(ns, target);
 			break;
+		case "srvstat":
+			printSeverStats(ns, target);
+			break;
 		case "hacknodes":
 			await ns.run("/scripts/hacknodes.js");
 			break;
 		default:
-			ns.tprint("Invalid action");
+			ns.tprint("Invalid action!");
+			ns.tprint("clean [all | target]");
+			ns.tprint("spider");
+			ns.tprint("exec [all | target] [script] [self | target]");
+			ns.tprint("pwnfound");
+			ns.tprint("kill [all | target]");
+			ns.tprint("srvstat [target]");
+			ns.tprint("hacknodes");
 			break;
 	}
 }

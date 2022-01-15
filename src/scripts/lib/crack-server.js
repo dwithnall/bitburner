@@ -50,6 +50,7 @@ export async function crackServer(ns, srv, processAll) {
 
 		if (!srvDetails.portReq <= portCount(ns, srv.host)) {
 			if (ns.nuke(srv.host)) ns.tprint(`PWND ${srvDetails.host}`);
+			//if (ns.installBackdoor(srv.host)) ns.tprint(`BACKDOOR ${srvDetails.host}`);
 		}
 	}
 	return true;

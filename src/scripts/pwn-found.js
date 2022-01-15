@@ -15,12 +15,16 @@ export async function main(ns) {
 		for (let srvIdx in srvList) {
 			let srv = srvList[srvIdx];
 
-			// only try cracking a server if  we haven't pwned it already.
-			if (
-				((await crackServer(ns, srv, processAll)) &&
-					!ns.fileExists("pwned.txt", srv.host)) ||
-				processAll
-			) {
+			const srvDetails = ns.getServer(srv.host);
+
+			let hack = false;
+			if (!hack && srvDetails.openPortCount < 5) hack = true;
+			if (!hack && !srvDetails.backdoorInstalled) hack = true;
+			if (!hack && !srvDetails.hasAdminRights) hack = true;
+			if (!hack && !ns.fileExists("pwned.txt", srv.host)) hack = true;
+
+			if (hack && (await crackServer(ns, srv, processAll))) {
+				// only try cracking a server if  we haven't pwned it already.
 				// Start pilfering
 				ns.run("/scripts/cnc.js", 1, "exec", srv.host, "pilfer", srv.host);
 				// Flag the server as pwned.
