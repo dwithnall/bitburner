@@ -31,6 +31,7 @@ export async function copyFile(ns) {
 
 export const printSeverStats = (ns, target) => {
 	const srv = ns.getServer(target);
+	const processes = ns.ps(target);
 
 	let ports = [];
 	if (srv.httpPortOpen) ports.push("HTTP");
@@ -57,5 +58,13 @@ export const printSeverStats = (ns, target) => {
 	ns.tprint(
 		`\t$: ${srv.moneyAvailable} / ${srv.moneyMax} - ${srv.serverGrowth}`
 	);
+	ns.tprint("\nACTIVE PROCESSES\n");
+
+	for (let idx in processes) {
+		ns.tprint(
+			`\t[Threads:${processes[idx].threads}] [pid:${processes[idx].pid}] ${processes[idx].filename} ${processes[idx].args}`
+		);
+	}
+
 	ns.tprint("\n");
 };

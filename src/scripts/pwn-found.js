@@ -19,7 +19,7 @@ export async function main(ns) {
 
 			let hack = false;
 			if (!hack && srvDetails.openPortCount < 5) hack = true;
-			if (!hack && !srvDetails.backdoorInstalled) hack = true;
+			//if (!hack && !srvDetails.backdoorInstalled) hack = true; // Can't automate backdoor install yet
 			if (!hack && !srvDetails.hasAdminRights) hack = true;
 			if (!hack && !ns.fileExists("pwned.txt", srv.host)) hack = true;
 
