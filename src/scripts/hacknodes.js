@@ -1,14 +1,20 @@
 /**
  * @param {NS} ns
  **/
-
+const ns
 export async function main(ns) {
+	ns = ns;
 	const allowancePct = 0.15; // 15%
+	const maxNodes = 25;
+
 	while (true) {
 		let allowedCash = ns.getServerMoneyAvailable("home") * allowancePct;
 
 		// Try buying a node first
-		if (ns.hacknet.getPurchaseNodeCost() < allowedCash) {
+		if (
+			ns.hacknet.getPurchaseNodeCost() < allowedCash &&
+			ns.hacknet.numNodes() <= maxNodes
+		) {
 			ns.hacknet.purchaseNode();
 		} else {
 			// iterate through all our nodes and upgrade them in order

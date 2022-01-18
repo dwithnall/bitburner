@@ -13,7 +13,7 @@ async function exec(ns, srv, script, target) {
 		return; // server doesn't have enough ram to run the script
 	}
 
-	let scpSuccess = await ns.scp(script, "home", srv); // make sure host has the current script version
+	if (srv !== "home") await ns.scp(script, "home", srv); // make sure host has the current script version
 
 	let threads = Math.floor(ns.getServerMaxRam(srv) / ns.getScriptRam(script)); // calc threads to run
 
@@ -26,7 +26,11 @@ export async function remoteExecute(ns, execServer, script, targetServer = "") {
 	const srvList = JSON.parse(ns.read("server-list.txt"));
 
 	// check execution server exists
-	if (execServer !== "all" && !(execServer in srvList)) {
+	if (
+		execServer !== "all" &&
+		execServer !== "home" &&
+		!(execServer in srvList)
+	) {
 		ns.tprint("invalid execution server");
 		return;
 	}

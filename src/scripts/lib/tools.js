@@ -53,27 +53,32 @@ export const printSeverStats = (ns, target) => {
 
 	let str = `
 	  ${srv.hostname} [${srv.ip}] <${owner}>
-	  ${admin} ${backdoor} hack: ${srv.hackDifficulty}/${
-		srv.requiredHackingSkill
-	} - ${srv.minDifficulty}/${srv.baseDifficulty}
+	  ${admin} ${backdoor}
+		Hack [Diff/Req]: ${srv.hackDifficulty}/${srv.requiredHackingSkill}
+		Diff [Min/Base]: ${srv.minDifficulty}/${srv.baseDifficulty}
 	  RAM ${srv.ramUsed}/${srv.maxRam} CORES: ${srv.cpuCores}
 	  PORTS: ${srv.openPortCount} / ${
 		srv.numOpenPortsRequired
 	} [${ports.toString()}]
-	  $:${formatter.format(srv.moneyAvailable)} / ${formatter.format(
-		srv.moneyMax
-	)} - +${formatter.format(srv.serverGrowth)}
+	  $:${ns.nFormat(srv.moneyAvailable, "0,0")} / $${ns.nFormat(
+		srv.moneyMax,
+		"0,0"
+	)} - +$${ns.nFormat(srv.serverGrowth, "0,0")}
 	  ACTIVE PROCESSES
 	${activeProc.join("\n")}`;
 
 	ns.tprintf(str);
 };
 
-var formatter = new Intl.NumberFormat("en-US", {
-	style: "currency",
-	currency: "USD",
+export const rootServers = (ns) => {
+	const srvList = JSON.parse(ns.read("server-list.txt"));
+	let hackable = [];
 
-	// These options are needed to round to whole numbers if that's what you want.
-	//minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-	maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-});
+	for (let srvIdx in srvList) {
+		const srv = srvList[srvIdx];
+
+		if (ns.hasRootAccess(srv.host)) hackable.push(srv.host);
+	}
+
+	return hackable;
+};
